@@ -5,10 +5,8 @@ record(bo, "$(BL):$(DEV):$(GROUP):Enable")
   field(VAL, "1")
 }
 
-record(bo, "$(BL):$(DEV):$(GROUP):ACK")
+record(ao, "$(BL):$(DEV):$(GROUP):ACK")
 {
-  field(ZNAM, "            ")
-  field(ONAM, "Acknowledged")
 }
 
 record(calc, "$(BL):$(DEV):$(GROUP):alarmstate")
