@@ -1,0 +1,3 @@
+## Records to be saved by autosave
+$(BL):$(DEV):$(GROUP):Threshold
+$(BL):$(DEV):$(GROUP):reference.DESC

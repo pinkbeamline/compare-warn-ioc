@@ -1,0 +1,56 @@
+record(bo, "$(BL):$(DEV):$(GROUP):Enable")
+{
+  field(ZNAM, "Disable")
+  field(ONAM, "Enable")
+  field(VAL, "1")
+}
+
+record(bo, "$(BL):$(DEV):$(GROUP):ACK")
+{
+  field(ZNAM, "            ")
+  field(ONAM, "Acknowledged")
+}
+
+record(calc, "$(BL):$(DEV):$(GROUP):alarmstate")
+{
+  field(INPA, "$(BL):$(DEV):$(GROUP):Enable CPP")
+  field(INPB, "$(BL):$(DEV):$(GROUP):calcTHR CPP")
+  field(INPC, "$(BL):$(DEV):$(GROUP):ACK CPP")
+  field(CALC, "(A&B&(!C))?1:0")
+}
+
+record(ao, "$(BL):$(DEV):$(GROUP):Threshold")
+{
+  field(PREC, "0")
+  field(EGU, "mbar")
+}
+
+record(ao, "$(BL):$(DEV):$(GROUP):testlevel")
+{
+  field(PREC, "0")
+  field(EGU, "mbar")
+}
+
+record(calc, "$(BL):$(DEV):$(GROUP):calcTHR")
+{
+  field(INPA, "$(BL):$(DEV):$(GROUP):reference CPP")
+  field(INPB, "$(BL):$(DEV):$(GROUP):Threshold CPP")
+  field(CALC, "A<B?0:1")
+}
+
+record(calc, "$(BL):$(DEV):$(GROUP):reference")
+{
+  field(INPA, "$(GAUGE) CPP")
+  field(PREC, "0")
+  field(EGU, "mbar")
+  field(CALC, "A")
+}
+
+record(calcout, "$(BL):$(DEV):$(GROUP):calcACK")
+{
+  field(INPA, "$(BL):$(DEV):$(GROUP):reference CPP")
+  field(INPB, "$(BL):$(DEV):$(GROUP):Threshold CPP")
+  field(INPC, "$(BL):$(DEV):$(GROUP):ACK")
+  field(CALC, "A<B?0:C")
+  field(OUT, "$(BL):$(DEV):$(GROUP):ACK PP")
+}
