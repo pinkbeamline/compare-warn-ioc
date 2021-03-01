@@ -1,5 +1,6 @@
 file "$(TOP)/db/snd.db"{ pattern
 {  BL,    DEV, GROUP,                    GAUGE}
-{PINK,  SNDAL,    G1,  PINK:SNDAL:G1:testlevel}
-{PINK,  SNDAL,    G2,  PINK:SNDAL:G2:testlevel}
+{PINK,  SNDAL,    G1,      PINK:MAXB:S2Measure}
+{PINK,  SNDAL,    G2,      PINK:MAXB:S3Measure}
+{PINK,  SNDAL,    G3,      PINK:MAXA:S2Measure}
 }

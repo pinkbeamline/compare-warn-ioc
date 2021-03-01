@@ -1,0 +1,43 @@
+record(bo, "$(BL):$(DEV):scanDone")
+{
+  field(ZNAM, "Off")
+  field(ONAM, "On")
+  field(HIGH, "1")
+}
+
+record(bo, "$(BL):$(DEV):scanAlarmTrigger")
+{
+  field(ZNAM, "Off")
+  field(ONAM, "On")
+  field(HIGH, "1")
+}
+
+record(bo, "$(BL):$(DEV):scanAlarmEnable")
+{
+  field(ZNAM, "Off")
+  field(ONAM, "On")
+}
+
+record(bo, "$(BL):$(DEV):scanAlarmACK")
+{
+  field(ZNAM, "Off")
+  field(ONAM, "On")
+  field(HIGH, "1")
+}
+
+record(calc, "$(BL):$(DEV):scanAlarmState")
+{
+  field(INPA, "$(BL):$(DEV):scanDone CPP")
+  field(INPB, "$(BL):$(DEV):scanAlarmTrigger CPP")
+  field(INPC, "$(BL):$(DEV):scanAlarmEnable")
+  field(INPD, "$(BL):$(DEV):scanAlarmACK CPP")
+  field(CALC, "(VAL&(!D))|A&C|B")
+}
+
+record(mbbo, "$(BL):$(DEV):sound")
+{
+  field(ZRST, "Sound 1")
+  field(ONST, "Sound 2")
+  field(TWST, "Sound 3")
+}
+

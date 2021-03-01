@@ -23,9 +23,9 @@
 # the CONFIG_SITE file.
 
 # Variables and paths to dependent modules:
-SUPPORT=/home/epics/EPICS/support
-CALC=$(SUPPORT)/calc-R3-6-1
-AUTOSAVE=$(SUPPORT)/autosave-R5-7-1
+SUPPORT=/home/epics/EPICS/support2
+CALC=$(SUPPORT)/calc-R3-7
+AUTOSAVE=$(SUPPORT)/autosave-R5-9
 
 # If using the sequencer, point SNCSEQ at its top directory:
 #SNCSEQ = $(MODULES)/seq-ver

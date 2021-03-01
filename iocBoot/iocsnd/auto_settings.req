@@ -1,2 +1,3 @@
 file snd.req BL=$(BL),DEV=$(DEV),GROUP=G1
 file snd.req BL=$(BL),DEV=$(DEV),GROUP=G2
+file snd.req BL=$(BL),DEV=$(DEV),GROUP=G3

@@ -12,7 +12,7 @@ dbLoadDatabase "dbd/snd.dbd"
 snd_registerRecordDeviceDriver pdbbase
 
 ## Load record instances
-#dbLoadRecords("db/snd.db","BL=PINK,DEV=SNDAL,GROUP=G1")
+dbLoadRecords("db/scanalarm.db","BL=PINK,DEV=SCNALM")
 
 cd "${TOP}/iocBoot/${IOC}"
 
